@@ -18,4 +18,17 @@ main {
 div {
   cursor: default;
 }
+
+.card-content {
+  max-height: 88px;
+  cursor: pointer;
+}
+
+.card img {
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #bbdefb;
+}
 /*# sourceMappingURL=main.css.map */

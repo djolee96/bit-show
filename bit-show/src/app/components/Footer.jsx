@@ -3,9 +3,9 @@ import year from "../../shared/curentYear"
 class Footer extends React.Component {
     render() {
         return (
-            <footer class="page-footer blue">
-                <div class="footer-copyright">
-                    <div class="container">
+            <footer className="page-footer blue">
+                <div className="footer-copyright">
+                    <div className="container">
                         © {year()} Copyright Text
                     </div>
                 </div>

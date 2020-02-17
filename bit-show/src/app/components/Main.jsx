@@ -1,8 +1,11 @@
 import React from 'react';
-
+import MostPopular from "./MostPopular"
 class Main extends React.Component {
+
     render() {
-        return (<main>Hello World</main>)
+        return (<main>
+            <MostPopular />
+        </main>)
     }
 }
 
