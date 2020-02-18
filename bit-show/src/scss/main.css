@@ -113,4 +113,15 @@ div {
 .card:hover {
   background-color: #bbdefb;
 }
+
+.genre {
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.about {
+  padding-top: 25px;
+}
 /*# sourceMappingURL=main.css.map */

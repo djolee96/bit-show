@@ -1,7 +1,7 @@
 import React from 'react';
 import ShowCard from "./ShowCard";
 import Loader from "./Loader";
-import showsService from "../../services/showsService";
+import { fetchShows } from "../../services/showsService";
 import Show from "../../models/show";
 
 class MostPopular extends React.Component {
@@ -14,7 +14,7 @@ class MostPopular extends React.Component {
         }
     }
     componentDidMount() {
-        showsService()
+        fetchShows()
             .then(shows => {
                 shows.length = 50
                 this.setState({ shows: shows.map(show => new Show(show)), isLoaded: true })
