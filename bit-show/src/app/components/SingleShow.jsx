@@ -4,6 +4,7 @@ import Show from "../../models/show"
 import Actor from "../../models/actor"
 import Genre from "./Genre"
 import CastCard from './CastCard'
+import filterString from "../../shared/filterString"
 class SingleShow extends React.Component {
     constructor(props) {
         super(props)
@@ -39,7 +40,7 @@ class SingleShow extends React.Component {
             <div className="col s12 m6 xl6 offset-xl1">
                 <h3 class="card-title">{title}</h3>
                 {genres.map((genre) => <Genre genre={genre} />)}
-                <div className="about">{summary.substr(3, summary.length - 7)}</div>   {/* problem with <p></p> from api */}
+                <div className="about">{filterString(summary, ['<p>', '</p>', '<b>', '</b>'])}</div>   {/* problem with <p></p> <b></b>from api */}
             </div>
             <div className="col s12 m12 xl12">
                 <div className="row">
