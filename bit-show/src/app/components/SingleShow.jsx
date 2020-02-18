@@ -18,10 +18,8 @@ class SingleShow extends React.Component {
         fetchSingleShow(id)
             .then(show => {
                 const actors = show._embedded.cast
-                console.log(actors);
                 actors.length = 6
                 this.setState({ show: new Show(show), actors: actors.map(actor => new Actor(actor)) })
-                console.log(this.state.actors);
             }
             )
     }
