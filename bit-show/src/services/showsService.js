@@ -9,4 +9,9 @@ function fetchSingleShow(id) {
     return (http.get(url))
 }
 
-export { fetchShows, fetchSingleShow }
+function fetchSearchShow(query) {
+    const url = `http://api.tvmaze.com/search/shows?q=${query}`
+    return (http.get(url))
+}
+
+export { fetchShows, fetchSingleShow, fetchSearchShow }
