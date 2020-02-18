@@ -8,12 +8,10 @@ function filterString(string, ArrayOfText/*array of strings to remove from strin
             if (string.indexOf(ArrayOfText[index]) === 0) {
                 iterationString = iterationString.substr(ArrayOfText[index].length, stringLength)
             }
-            else if (string.indexOf(ArrayOfText[index]) != -1) {
+            else if (string.indexOf(ArrayOfText[index]) !== -1) {
                 iterationString = iterationString.substr(0, iterationString.indexOf(ArrayOfText[index])) + iterationString.substr((iterationString.indexOf(ArrayOfText[index]) + ArrayOfText[index].length), stringLength)
             }
-            else {
-                iterationString = iterationString
-            }
+
         }
         newString = iterationString
     }
