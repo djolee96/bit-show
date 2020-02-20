@@ -5,12 +5,15 @@ import Actor from "../../models/actor"
 import Genre from "./Genre"
 import CastCard from './CastCard'
 import filterString from "../../shared/filterString"
+import Loader from "./Loader";
+
 class SingleShow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             show: {},
-            actors: []
+            actors: [],
+            isLoaded: false
         }
     }
     componentDidMount() {
@@ -19,13 +22,18 @@ class SingleShow extends React.Component {
             .then(show => {
                 const actors = show._embedded.cast
                 actors.length = 6
-                this.setState({ show: new Show(show), actors: actors.map(actor => new Actor(actor)) })
+                this.setState({ isLoaded: true, show: new Show(show), actors: actors.map(actor => new Actor(actor)) }
+                )
             }
             )
     }
     render() {
         let { picture, title, genres = [], summary = "" } = this.state.show
         const actors = this.state.actors
+        const isLoaded = this.state.isLoaded
+        if (!isLoaded) {
+            <Loader />
+        }
         if (!picture) {
             picture = { medium: "http://static.tvmaze.com/uploads/images/medium_portrait/0/305.jpg" }
         }
