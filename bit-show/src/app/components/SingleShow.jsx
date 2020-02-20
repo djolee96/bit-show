@@ -32,7 +32,7 @@ class SingleShow extends React.Component {
         const actors = this.state.actors
         const isLoaded = this.state.isLoaded
         if (!isLoaded) {
-            <Loader />
+            return <Loader />
         }
         if (!picture) {
             picture = { medium: "http://static.tvmaze.com/uploads/images/medium_portrait/0/305.jpg" }
