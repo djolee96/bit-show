@@ -1,0 +1,52 @@
+.container {
+width: 90%;
+}
+
+nav {
+    height: 40px;
+    background-color: #343a40;
+    margin-bottom: 1%;
+}
+
+h3 {
+    color: white;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.search {
+    width: 50%;
+    display: inline-block;
+    justify-content: flex-end;
+
+}
+.drop{
+    background-color: white;
+    width: 46%;
+    list-style-type: none;
+    padding: 0px;
+    position:absolute;
+    z-index: 1;
+}
+.drop li{
+    width: 100%;
+}
+footer{
+    height: 60px;
+    background-color: #343a40;
+    text-align: center;
+    color: white;
+}
+footer p {
+    margin-top: 20px;
+}
+
+.seasonsAndCast{
+    display: inline-block;
+    float: right;
+    width: 48%;
+}
+.bit:hover{
+cursor: pointer;
+}
